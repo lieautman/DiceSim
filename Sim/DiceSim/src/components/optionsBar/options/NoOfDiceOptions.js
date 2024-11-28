@@ -25,6 +25,8 @@ function NoOfDiceOptions() {
           }}
           onChange={(data) => dispatch(changeDiceNo(data.target.value))}
           defaultValue={1}
+          min={1}
+          max={20}
           aria-label="Default"
           valueLabelDisplay="auto"
         />
