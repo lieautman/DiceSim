@@ -11,19 +11,21 @@ export const diceSlice = createSlice({
   name: "dice",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    roll: (state) => {
+      state.dice.forEach((el) => {
+        el.result = Math.trunc(Math.random() * el.faces + 1);
+      });
     },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    changeDiceNo: (state, action) => {
+      state.dice = [
+        { faces: 6, result: 0 },
+        { faces: 6, result: 0 }
+      ];
     }
   }
 });
 
-export const { increment, decrement, incrementByAmount } = diceSlice.actions;
+export const { roll, changeDiceNo } = diceSlice.actions;
 
 export const selectDice = (state) => state.dice;
 

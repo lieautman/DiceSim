@@ -1,4 +1,8 @@
+import { roll } from "../../../reduxStore/diceSlice";
+import { useDispatch } from "react-redux";
 function RollButton() {
+  const dispatch = useDispatch();
+
   return (
     <button
       style={{
@@ -7,7 +11,7 @@ function RollButton() {
         width: "20vw",
         height: "10vh"
       }}
-      onClick={() => {}}
+      onClick={() => dispatch(roll())}
     >
       ROLL
     </button>

@@ -1,15 +1,9 @@
-import { useState } from "react";
 import { theme1 } from "../../theme/theme";
 import { useSelector } from "react-redux";
 import { selectDice } from "../../reduxStore/diceSlice";
 
 function DiceBox() {
-  const [noOfDices, setNoOfDices] = useState([
-    { noOfFaces: 6 },
-    { noOfFaces: 6 }
-  ]);
-  const dice = useSelector(selectDice);
-  console.log("ceva", dice);
+  const dices = useSelector(selectDice);
   return (
     <div
       style={{
@@ -24,7 +18,7 @@ function DiceBox() {
         borderRadius: "40px"
       }}
     >
-      {noOfDices.map((dice) => {
+      {dices.map((el) => {
         return (
           <div
             style={{
@@ -34,7 +28,7 @@ function DiceBox() {
               borderRadius: "10px"
             }}
           >
-            {Math.trunc(Math.random() * dice.noOfFaces + 1)}
+            {el.result}
           </div>
         );
       })}
