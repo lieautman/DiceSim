@@ -1,10 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  dice: [
-    { faces: 6, result: 0 },
-    { faces: 6, result: 0 }
-  ]
+  dice: [{ faces: 6, result: 0 }]
 };
 
 export const diceSlice = createSlice({
@@ -17,10 +14,11 @@ export const diceSlice = createSlice({
       });
     },
     changeDiceNo: (state, action) => {
-      state.dice = [
-        { faces: 6, result: 0 },
-        { faces: 6, result: 0 }
-      ];
+      const dices = Array.from({ length: action.payload }, () => ({
+        faces: 6,
+        result: 0
+      }));
+      state.dice = dices;
     }
   }
 });
