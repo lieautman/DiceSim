@@ -4,10 +4,13 @@ import { theme1 } from "../../../theme/theme";
 import Slider from "@mui/material/Slider";
 import { changeDiceNo } from "../../../reduxStore/diceSlice";
 import { useDispatch } from "react-redux";
+import { TextField } from "@mui/material";
+import { useState } from "react";
 
 function NoOfDiceOptions() {
   const dices = useSelector(selectDice);
   const dispatch = useDispatch();
+  const [noOfDiceMax, setNoOfDiceMax] = useState(20);
 
   return (
     <div
@@ -17,7 +20,25 @@ function NoOfDiceOptions() {
       }}
     >
       <div>
-        <p>No of dices: {dices.length}</p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            padding: "10px",
+            justifyContent: "center"
+          }}
+        >
+          <p>No of dices max:</p>
+          <TextField
+            type="number"
+            value={noOfDiceMax}
+            style={{
+              backgroundColor: theme1.textColor,
+              width: "5vw"
+            }}
+            onChange={(data) => setNoOfDiceMax(data.target.value)}
+          ></TextField>
+        </div>
         <Slider
           style={{
             color: theme1.textColor,
@@ -25,8 +46,8 @@ function NoOfDiceOptions() {
           }}
           onChange={(data) => dispatch(changeDiceNo(data.target.value))}
           defaultValue={1}
-          min={1}
-          max={20}
+          min={noOfDiceMax - 20}
+          max={noOfDiceMax}
           aria-label="Default"
           valueLabelDisplay="auto"
         />
