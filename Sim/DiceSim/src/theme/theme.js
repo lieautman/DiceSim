@@ -1,6 +1,6 @@
 export const theme1 = {
-  backgroundColor: "rgb(16, 7, 15)",
-  boxColor: "rgb(32, 18, 27)",
-  optionsColor: "rgb(0,0,0)",
+  backgroundColor: "rgb(0, 0, 0)",
+  boxColor: "rgb(32, 32, 32)",
+  optionsColor: "rgb(60, 60, 60)",
   textColor: "rgb(255, 255, 255)"
 };

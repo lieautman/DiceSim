@@ -9,7 +9,8 @@ function OptionsBar() {
         height: "100vh",
         width: "20vw",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        justifyContent: "space-between"
       }}
     >
       <NoOfDiceOptions></NoOfDiceOptions>

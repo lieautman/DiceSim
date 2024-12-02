@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux";
-import { selectDice } from "../../../reduxStore/diceSlice";
 import { theme1 } from "../../../theme/theme";
 import Slider from "@mui/material/Slider";
 import { changeDiceNo } from "../../../reduxStore/diceSlice";
@@ -8,7 +6,6 @@ import { TextField } from "@mui/material";
 import { useState } from "react";
 
 function NoOfDiceOptions() {
-  const dices = useSelector(selectDice);
   const dispatch = useDispatch();
   const [noOfDiceMax, setNoOfDiceMax] = useState(20);
 

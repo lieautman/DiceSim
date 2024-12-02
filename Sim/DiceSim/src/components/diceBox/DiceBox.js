@@ -13,6 +13,7 @@ function DiceBox() {
         marginTop: "5vh",
         marginLeft: "5vw",
         display: "flex",
+        flexWrap: "wrap",
         alignItems: "center",
         justifyContent: "center",
         borderRadius: "40px"
@@ -23,9 +24,12 @@ function DiceBox() {
           <div
             style={{
               backgroundColor: "white",
+              borderRadius: "10px",
+              textAlign: "center",
+              paddingTop: "2vh",
+              paddingBottom: "2vh",
               margin: "1vw",
-              padding: "10px",
-              borderRadius: "10px"
+              flex: "0 0 calc(5vw)"
             }}
           >
             {el.result}

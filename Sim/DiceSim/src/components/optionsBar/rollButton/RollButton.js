@@ -6,10 +6,12 @@ function RollButton() {
   return (
     <button
       style={{
-        position: "absolute",
         bottom: "10px",
-        width: "20vw",
-        height: "10vh"
+        width: "10vw",
+        height: "10vh",
+        marginLeft: "5vw",
+        marginTop: "2vh",
+        marginBottom: "2vh"
       }}
       onClick={() => dispatch(roll())}
     >
