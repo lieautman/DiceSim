@@ -1,5 +1,6 @@
 import { theme1 } from "../../theme/theme";
 import NoOfDiceOptions from "./options/NoOfDiceOptions";
+import RerollButtons from "./rerollButtons/RerollButtons";
 import RollButton from "./rollButton/RollButton";
 function OptionsBar() {
   return (
@@ -14,6 +15,7 @@ function OptionsBar() {
       }}
     >
       <NoOfDiceOptions></NoOfDiceOptions>
+      <RerollButtons></RerollButtons>
       <RollButton></RollButton>
     </div>
   );
