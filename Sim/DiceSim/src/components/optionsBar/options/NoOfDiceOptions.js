@@ -33,7 +33,9 @@ function NoOfDiceOptions() {
               backgroundColor: theme1.textColor,
               width: "5vw"
             }}
-            onChange={(data) => setNoOfDiceMax(data.target.value)}
+            onChange={(data) => {
+              setNoOfDiceMax(data.target.value);
+            }}
           ></TextField>
         </div>
         <Slider
