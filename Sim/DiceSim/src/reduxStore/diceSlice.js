@@ -13,6 +13,14 @@ export const diceSlice = createSlice({
         el.result = Math.trunc(Math.random() * el.faces + 1);
       });
     },
+    reroll: (state, action) => {
+      state.dice.forEach((el) => {
+        el.result =
+          el.result <= action.payload
+            ? Math.trunc(Math.random() * el.faces + 1)
+            : el.result;
+      });
+    },
     changeDiceNo: (state, action) => {
       const dices = Array.from({ length: action.payload }, () => ({
         faces: 6,
@@ -23,7 +31,7 @@ export const diceSlice = createSlice({
   }
 });
 
-export const { roll, changeDiceNo } = diceSlice.actions;
+export const { roll, reroll, changeDiceNo } = diceSlice.actions;
 
 export const selectDice = (state) => state.dice;
 

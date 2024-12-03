@@ -1,4 +1,8 @@
+import { reroll } from "../../../reduxStore/diceSlice";
+import { useDispatch } from "react-redux";
 function RerollButtons() {
+  const dispatch = useDispatch();
+
   return (
     <div
       style={{
@@ -15,6 +19,7 @@ function RerollButtons() {
           marginLeft: "1vw",
           borderRadius: "10px"
         }}
+        onClick={() => dispatch(reroll(1))}
       >
         Reroll 1
       </button>
@@ -25,6 +30,7 @@ function RerollButtons() {
           marginLeft: "1vw",
           borderRadius: "10px"
         }}
+        onClick={() => dispatch(reroll(2))}
       >
         Reroll 2
       </button>
@@ -35,6 +41,7 @@ function RerollButtons() {
           marginLeft: "1vw",
           borderRadius: "10px"
         }}
+        onClick={() => dispatch(reroll(3))}
       >
         Reroll 3
       </button>
@@ -45,6 +52,7 @@ function RerollButtons() {
           marginLeft: "1vw",
           borderRadius: "10px"
         }}
+        onClick={() => dispatch(reroll(4))}
       >
         Reroll 4
       </button>
@@ -55,6 +63,7 @@ function RerollButtons() {
           marginLeft: "1vw",
           borderRadius: "10px"
         }}
+        onClick={() => dispatch(reroll(5))}
       >
         Reroll 5
       </button>
@@ -65,6 +74,7 @@ function RerollButtons() {
           marginLeft: "1vw",
           borderRadius: "10px"
         }}
+        onClick={() => dispatch(reroll(6))}
       >
         Reroll 6
       </button>
