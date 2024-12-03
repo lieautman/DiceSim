@@ -16,7 +16,8 @@ function DiceBox() {
         flexWrap: "wrap",
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: "40px"
+        borderRadius: "40px",
+        overflow: "hidden"
       }}
     >
       {dices.map((el) => {
