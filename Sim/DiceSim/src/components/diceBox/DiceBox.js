@@ -20,9 +20,10 @@ function DiceBox() {
         overflow: "hidden"
       }}
     >
-      {dices.map((el) => {
+      {dices.map((el, index) => {
         return (
           <div
+            key={"dice_" + index}
             style={{
               backgroundColor: "white",
               borderRadius: "10px",

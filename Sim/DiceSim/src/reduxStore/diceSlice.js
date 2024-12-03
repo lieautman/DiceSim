@@ -30,11 +30,14 @@ export const diceSlice = createSlice({
         result: 0
       }));
       state.dice = dices;
+    },
+    setDice: (state, action) => {
+      state.dice = action.payload;
     }
   }
 });
 
-export const { roll, reroll, changeDiceNo } = diceSlice.actions;
+export const { roll, reroll, changeDiceNo, setDice } = diceSlice.actions;
 
 export const selectDice = (state) => state.dice;
 export const selectHistory = (state) => state.history;

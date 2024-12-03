@@ -1,9 +1,12 @@
 import { theme1 } from "../../theme/theme";
 import { useSelector } from "react-redux";
 import { selectHistory } from "../../reduxStore/diceSlice";
+import { setDice } from "../../reduxStore/diceSlice";
+import { useDispatch } from "react-redux";
 
 function HistoryBar() {
   const history = useSelector(selectHistory);
+  const dispatch = useDispatch();
   return (
     <div
       style={{
@@ -20,6 +23,7 @@ function HistoryBar() {
       {history.map((el, index) => {
         return (
           <button
+            key={"history_" + index}
             style={{
               backgroundColor: "white",
               textAlign: "center",
@@ -27,6 +31,9 @@ function HistoryBar() {
               padding: "10px",
               cursor: "pointer",
               borderRadius: "10px"
+            }}
+            onClick={() => {
+              // dispatch(setDice(el));
             }}
           >
             {history.length - index}
