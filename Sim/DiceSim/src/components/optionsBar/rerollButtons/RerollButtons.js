@@ -17,7 +17,8 @@ function RerollButtons() {
           width: "8vw",
           height: "10vh",
           marginLeft: "1vw",
-          borderRadius: "10px"
+          borderRadius: "10px",
+          cursor: "pointer"
         }}
         onClick={() => dispatch(reroll(1))}
       >
@@ -28,7 +29,8 @@ function RerollButtons() {
           width: "8vw",
           height: "10vh",
           marginLeft: "1vw",
-          borderRadius: "10px"
+          borderRadius: "10px",
+          cursor: "pointer"
         }}
         onClick={() => dispatch(reroll(2))}
       >
@@ -39,7 +41,8 @@ function RerollButtons() {
           width: "8vw",
           height: "10vh",
           marginLeft: "1vw",
-          borderRadius: "10px"
+          borderRadius: "10px",
+          cursor: "pointer"
         }}
         onClick={() => dispatch(reroll(3))}
       >
@@ -50,7 +53,8 @@ function RerollButtons() {
           width: "8vw",
           height: "10vh",
           marginLeft: "1vw",
-          borderRadius: "10px"
+          borderRadius: "10px",
+          cursor: "pointer"
         }}
         onClick={() => dispatch(reroll(4))}
       >
@@ -61,7 +65,8 @@ function RerollButtons() {
           width: "8vw",
           height: "10vh",
           marginLeft: "1vw",
-          borderRadius: "10px"
+          borderRadius: "10px",
+          cursor: "pointer"
         }}
         onClick={() => dispatch(reroll(5))}
       >
@@ -72,7 +77,8 @@ function RerollButtons() {
           width: "8vw",
           height: "10vh",
           marginLeft: "1vw",
-          borderRadius: "10px"
+          borderRadius: "10px",
+          cursor: "pointer"
         }}
         onClick={() => dispatch(reroll(6))}
       >

@@ -12,7 +12,8 @@ function RollButton() {
         marginLeft: "5vw",
         marginTop: "2vh",
         marginBottom: "2vh",
-        borderRadius: "10px"
+        borderRadius: "10px",
+        cursor: "pointer"
       }}
       onClick={() => dispatch(roll())}
     >
