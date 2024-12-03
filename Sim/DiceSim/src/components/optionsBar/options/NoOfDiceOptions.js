@@ -8,7 +8,7 @@ import { useState } from "react";
 function NoOfDiceOptions() {
   const dispatch = useDispatch();
   const [noOfDiceMax, setNoOfDiceMax] = useState(20);
-  const [sliderValue, setSliderValue] = useState(20);
+  const [sliderValue, setSliderValue] = useState(1);
 
   return (
     <div
@@ -26,13 +26,18 @@ function NoOfDiceOptions() {
             justifyContent: "center"
           }}
         >
-          <p>No of dices max:</p>
+          <p
+            style={{
+              width: "10vw"
+            }}
+          >
+            No of dices max:
+          </p>
           <TextField
             type="number"
             value={noOfDiceMax}
             style={{
-              backgroundColor: theme1.textColor,
-              width: "5vw"
+              width: "10vw"
             }}
             onChange={(data) => {
               if (data.target.value > 80) {
@@ -46,7 +51,6 @@ function NoOfDiceOptions() {
               }
             }}
           ></TextField>
-          <p>(max 80)</p>
         </div>
         <Slider
           style={{
