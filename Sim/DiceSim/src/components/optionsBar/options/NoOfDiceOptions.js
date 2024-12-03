@@ -35,11 +35,18 @@ function NoOfDiceOptions() {
               width: "5vw"
             }}
             onChange={(data) => {
-              setNoOfDiceMax(data.target.value);
-              dispatch(changeDiceNo(data.target.value));
-              setSliderValue(data.target.value);
+              if (data.target.value > 80) {
+                setNoOfDiceMax(noOfDiceMax);
+                dispatch(changeDiceNo(noOfDiceMax));
+                setSliderValue(noOfDiceMax);
+              } else {
+                setNoOfDiceMax(data.target.value);
+                dispatch(changeDiceNo(data.target.value));
+                setSliderValue(data.target.value);
+              }
             }}
           ></TextField>
+          <p>(max 80)</p>
         </div>
         <Slider
           style={{
