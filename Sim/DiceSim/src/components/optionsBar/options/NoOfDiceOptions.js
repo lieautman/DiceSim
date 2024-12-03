@@ -8,6 +8,7 @@ import { useState } from "react";
 function NoOfDiceOptions() {
   const dispatch = useDispatch();
   const [noOfDiceMax, setNoOfDiceMax] = useState(20);
+  const [sliderValue, setSliderValue] = useState(20);
 
   return (
     <div
@@ -35,6 +36,8 @@ function NoOfDiceOptions() {
             }}
             onChange={(data) => {
               setNoOfDiceMax(data.target.value);
+              dispatch(changeDiceNo(data.target.value));
+              setSliderValue(data.target.value);
             }}
           ></TextField>
         </div>
@@ -43,8 +46,12 @@ function NoOfDiceOptions() {
             color: theme1.textColor,
             width: "15vw"
           }}
-          onChange={(data) => dispatch(changeDiceNo(data.target.value))}
-          defaultValue={1}
+          value={sliderValue}
+          onChange={(data) => {
+            dispatch(changeDiceNo(data.target.value));
+            setSliderValue(data.target.value);
+          }}
+          defaultValue={20}
           min={noOfDiceMax - 20}
           max={noOfDiceMax}
           aria-label="Default"
