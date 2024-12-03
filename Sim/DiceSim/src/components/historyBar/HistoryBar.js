@@ -12,22 +12,24 @@ function HistoryBar() {
         width: "80vw",
         display: "flex",
         flexDirection: "row",
-        alignItems: "center"
+        alignItems: "center",
+        overflow: "scroll",
+        overflowY: "hidden"
       }}
     >
-      {history.map((el) => {
+      {history.map((el, index) => {
         return (
           <button
             style={{
               backgroundColor: "white",
               textAlign: "center",
-              margin: "1vw",
+              margin: "0.5vw",
               padding: "10px",
               cursor: "pointer",
               borderRadius: "10px"
             }}
           >
-            aaa
+            {history.length - index}
           </button>
         );
       })}
