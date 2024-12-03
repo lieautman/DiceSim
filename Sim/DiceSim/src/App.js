@@ -1,3 +1,4 @@
+import HistoryBar from "./components/historyBar/HistoryBar";
 import DiceBox from "./components/diceBox/DiceBox";
 import OptionsBar from "./components/optionsBar/OptionsBar";
 import { theme1 } from "./theme/theme";
@@ -13,7 +14,15 @@ function App() {
       }}
     >
       <OptionsBar></OptionsBar>
-      <DiceBox></DiceBox>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        <HistoryBar></HistoryBar>
+        <DiceBox></DiceBox>
+      </div>
     </div>
   );
 }

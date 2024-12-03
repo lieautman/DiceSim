@@ -8,7 +8,7 @@ function DiceBox() {
     <div
       style={{
         backgroundColor: theme1.boxColor,
-        height: "90vh",
+        height: "75vh",
         width: "70vw",
         marginTop: "5vh",
         marginLeft: "5vw",
@@ -27,8 +27,8 @@ function DiceBox() {
               backgroundColor: "white",
               borderRadius: "10px",
               textAlign: "center",
-              paddingTop: "2vh",
-              paddingBottom: "2vh",
+              paddingTop: "1vh",
+              paddingBottom: "1vh",
               margin: "1vw",
               flex: "0 0 calc(5vw)"
             }}
