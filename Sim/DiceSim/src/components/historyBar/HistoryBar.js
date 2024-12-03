@@ -20,7 +20,7 @@ function HistoryBar() {
         overflowY: "hidden"
       }}
     >
-      {history.map((el, index) => {
+      {history.toReversed().map((el, index) => {
         return (
           <button
             key={"history_" + index}
@@ -33,7 +33,7 @@ function HistoryBar() {
               borderRadius: "10px"
             }}
             onClick={() => {
-              // dispatch(setDice(el));
+              dispatch(setDice(el));
             }}
           >
             {history.length - index}
