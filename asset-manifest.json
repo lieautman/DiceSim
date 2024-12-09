@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WarhammerFiles/static/css/main.e6c13ad2.css",
+    "main.js": "/WarhammerFiles/static/js/main.e16358f3.js",
+    "index.html": "/WarhammerFiles/index.html",
+    "main.e6c13ad2.css.map": "/WarhammerFiles/static/css/main.e6c13ad2.css.map",
+    "main.e16358f3.js.map": "/WarhammerFiles/static/js/main.e16358f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.e16358f3.js"
+  ]
+}
